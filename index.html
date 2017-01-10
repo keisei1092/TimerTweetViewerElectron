@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TimerTweetViewer</title>
+    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./components.css">
+  </head>
+  <body>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    <div id="wrapper">
+      <div class="titleBar"></div>
+      <div id="textContainer">
+        <div id="text"></div>
+      </div>
+      <footer>
+        <img id="image" src="" />
+        <div id="nameContainer">
+          <div id="name"></div>
+          <div id="screen_name"></div>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</html>
