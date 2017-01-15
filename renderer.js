@@ -39,6 +39,17 @@ function updateContent(tweet) {
   $('#name').html(tweet.user.name);
   $('#screen_name').html('@' + tweet.user.screen_name);
   $('#image').attr('src', tweet.user.profile_image_url);
+  refreshAnchorTag();
+}
+
+function refreshAnchorTag() {
+  $('.jsRefreshAnchorTag').html(function(_, text) {
+    var url = text.match(/(((ftp|https?):\/\/)[\-\w@:%_\+.~#?,&\/\/=]+)|((mailto:)?[_.\w-]+@([\w][\w\-]+\.)+[a-zA-Z]{2,3})/g);
+    $.each(url, function(i, v) {
+        text = text.replace(v, '<a href="' + v + '">' + v + '</a>');        
+    });
+    return text;
+});
 }
 
 fetchTweets().done(function() {
