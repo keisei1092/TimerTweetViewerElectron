@@ -28,7 +28,7 @@ function fetchTweets() {
 }
 
 function repaint() { // setIntervalで呼ばれる
-  if (count == FETCH_TWEET_COUNT - 1) {
+  if (count == FETCH_TWEET_COUNT - 2) {
     location.reload();
   }
   updateContent(this.tweets[count]);
