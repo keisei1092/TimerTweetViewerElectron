@@ -1,7 +1,7 @@
 # TimerTweetViewerElectron
 
 <p align="center">
-    <img src="./screen_shot.png" width="400" />
+    <img src="./screen_shot.png" width="500" />
 </p>
 
 Timeline monitor.
