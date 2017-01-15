@@ -5,6 +5,10 @@ html, body {
   margin: 0;
 }
 
+a {
+  color: #F0F0F0;
+}
+
 #wrapper {
   position: relative;
   width: 100%;
