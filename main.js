@@ -15,7 +15,7 @@ function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 320,
-    height: 240,
+    height: 160,
     frame: false
   })
   mainWindow.setAlwaysOnTop(true);
