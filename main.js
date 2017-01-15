@@ -16,7 +16,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 320,
     height: 240,
-    titleBarStyle: 'hidden-inset'
+    frame: false
   })
   mainWindow.setAlwaysOnTop(true);
 
