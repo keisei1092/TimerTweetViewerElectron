@@ -1,5 +1,7 @@
 # TimerTweetViewerElectron
 
+![screen_shot](./screen_shot.png)
+
 Timeline monitor.
 
 ## To Use
