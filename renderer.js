@@ -5,12 +5,7 @@ const $ = require('jquery');
 
 // fetch tweets
 const Twitter = require('twitter');
-const client = new Twitter({
-  consumer_key: '',
-  consumer_secret: '',
-  access_token_key: '',
-  access_token_secret: ''
-});
+const client = new Twitter(twitterClidentials);
 
 var count = 0;
 var tweets = [];
