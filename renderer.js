@@ -11,10 +11,11 @@ var count = 0;
 var tweets = [];
 var timerId;
 var TIMER_TWEET_INTERVAL = 7500;
+const FETCH_TWEET_COUNT = 200;
 
 function fetchTweets() {
   let d = new $.Deferred;
-  client.get('statuses/home_timeline', {count: 200}, function(error, tweets, response) {
+  client.get('statuses/home_timeline', {count: FETCH_TWEET_COUNT}, function(error, tweets, response) {
     if (!error) {
       this.tweets = tweets;
       d.resolve();
