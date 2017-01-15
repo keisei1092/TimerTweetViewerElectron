@@ -1,6 +1,6 @@
 # TimerTweetViewerElectron
 
-![screen_shot](./screen_shot.png)
+<img src="./screen_shot.png" width="400" />
 
 Timeline monitor.
 
