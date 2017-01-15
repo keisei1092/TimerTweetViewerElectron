@@ -2,6 +2,7 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 const $ = require('jquery');
+const { shell } = require('electron');
 
 // fetch tweets
 const Twitter = require('twitter');
@@ -55,6 +56,7 @@ function refreshAnchorTag() {
 fetchTweets().done(function() {
   this.timerId = setInterval(repaint, TIMER_TWEET_INTERVAL);
   registerKeyEvents();
+  registerHandleAnchorTag();
 }).fail(function(error) {
   console.error('Error in fetchTweets(): ' + error);
 });
@@ -74,6 +76,14 @@ function registerKeyEvents() {
         return;
     }
     e.preventDefault();
+  });
+}
+
+function registerHandleAnchorTag() {
+  $(document).on('click', 'a[href^="http"]', function(e) {
+    e.preventDefault();
+    const url = $(this).attr('href');
+    shell.openExternal(url);
   });
 }
 
