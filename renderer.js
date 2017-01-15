@@ -49,7 +49,7 @@ function refreshAnchorTag() {
         text = text.replace(v, '<a href="' + v + '">' + v + '</a>');        
     });
     return text;
-});
+  });
 }
 
 fetchTweets().done(function() {
