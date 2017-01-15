@@ -27,6 +27,9 @@ function fetchTweets() {
 }
 
 function repaint() { // setIntervalで呼ばれる
+  if (count == FETCH_TWEET_COUNT - 1) {
+    location.reload();
+  }
   updateContent(this.tweets[count]);
   count++;
 }
@@ -62,3 +65,11 @@ function registerKeyEvents() {
     e.preventDefault();
   });
 }
+
+window.changeCount = function() {
+  count = FETCH_TWEET_COUNT - 2;
+};
+
+window.showCount = function() {
+  console.log(count);
+};
